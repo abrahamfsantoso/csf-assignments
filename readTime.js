@@ -58,7 +58,7 @@ function solve(time) {
     "twenty seven",
     "twenty eight",
     "twenty nine",
-    "half",
+    "half"
   ];
   let splitTime = time.split(":");
   let a = parseInt(splitTime[0], 10);
@@ -71,13 +71,13 @@ function solve(time) {
   } else if (b == 1) {
     return `${minutes[b]} minute past ${hour[a]}`;
   } else if (b == 59) {
-    return `one minute to ${hour[a + 1]}`;
+    return `${minutes[60-b]} minute to ${hour[a + 1]}`;
   } else if (b == 15) {
-    return `quarter past ${hour[a]}`;
+    return `${minutes[b]} past ${hour[a]}`;
   } else if (b == 30) {
-    return `half past ${hour[a]}`;
+    return `${minutes[b]} past ${hour[a]}`;
   } else if (b == 45) {
-    return `quarter to ${hour[a + 1]}`;
+    return `${minutes[60-b]} to ${hour[a + 1]}`;
   } else if (b < 30) {
     return `${minutes[b]} minutes past ${hour[a]}`;
   } else if (b > 30) {
